@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Pet API' do
+describe 'Pet requests' do
   it 'sends pet info' do
     pet = create(:pet)
 
@@ -15,5 +15,6 @@ describe 'Pet API' do
     expect(info['age']).to eq(pet.age)
     expect(info['gender']).to eq(pet.gender)
     expect(info['description']).to eq(pet.description)
+    expect(info['store_id']).to eq(pet.store_id)
   end
 end
