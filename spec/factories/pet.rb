@@ -5,5 +5,7 @@ FactoryBot.define do
     age {Faker::Dog.age}
     gender {Faker::Dog.gender}
     description {Faker::Lorem.paragraph}
+
+    store
   end
 end
