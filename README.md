@@ -15,16 +15,22 @@ After forking and/or cloning this project please run the following commands from
 ### End Points
 
 `/api/v1/pets`: returns a list of all pets and their attributes
+![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_pets.png) "Response Example"
 
 `/api/v1/pets/:id`: returns a single pet by id and its attributes
+![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_pet_1.png) "Response Example"
 
 `/api/v1/stores`: returns a list of all pets and their attributes
+![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_stores.png) "Response Example"
 
 `/api/v1/stores/:id`: returns a single store by id and its attributes
+![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_stores_1.png) "Response Example"
 
 `api/v1/stores/:store_id/orders`: returns orders associated to a single stores
+![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_stores_1_orders.png) "Response Example"
 
 `api/v1/stores/:store_id/orders/:id`: returns a single orders by id associated to a single store
+![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_stores_1_orders_1.png) "Response Example"
 
 ### Adding a Serializer
 1. Add `gem 'active_model_serializers'` to the Gemfile above `group :development, :test do`
