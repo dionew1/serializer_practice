@@ -7,4 +7,5 @@ class Pet < ApplicationRecord
                         :description,
                         :adoption_price
   belongs_to :store
+  enum status: { available: 0, sold: 1 }
 end

@@ -10,7 +10,7 @@
 end
 
 
-30.times do
+25.times do
   pet = Pet.create!(
     name: Faker::Dog.name,
     breed: Faker::Dog.breed,
@@ -26,3 +26,16 @@ end
      store_id: pet.store_id
    )
 end
+
+5.times do
+  pet = Pet.create!(
+    name: Faker::Dog.name,
+    breed: Faker::Dog.breed,
+    age: Faker::Dog.age,
+    gender: Faker::Dog.gender,
+    description: Faker::Lorem.paragraph,
+    adoption_price:  Faker::Commerce.price,
+    store: Store.find(rand(1..10)),
+    status: 1
+   )
+ end
