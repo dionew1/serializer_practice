@@ -8,4 +8,5 @@ class Store < ApplicationRecord
                         :zip,
                         :base_adoption_fee
   has_many :pets
+  has_many :orders
 end
