@@ -38,6 +38,9 @@ describe 'Store requests' do
 
   it "sends orders for a store" do
     store = create(:store)
+
     get api_v1_store_orders_path(store)
+
+    
   end
 end
