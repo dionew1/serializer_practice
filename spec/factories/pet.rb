@@ -5,7 +5,7 @@ FactoryBot.define do
     age {Faker::Dog.age}
     gender {Faker::Dog.gender}
     description {Faker::Lorem.paragraph}
-
+    adoption_price {Faker::Commerce.price}
     store
   end
 end

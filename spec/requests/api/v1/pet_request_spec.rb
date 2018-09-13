@@ -15,6 +15,7 @@ describe 'Pet requests' do
     expect(info['age']).to eq(pet.age)
     expect(info['gender']).to eq(pet.gender)
     expect(info['description']).to eq(pet.description)
+    expect(info['adoption_price']).to eq(pet.adoption_price.to_s)
     expect(info['store_id']).to eq(pet.store_id)
   end
 end

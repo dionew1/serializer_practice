@@ -16,6 +16,7 @@ describe 'Store requests' do
     expect(info.first['city']).to eq(stores.first.city)
     expect(info.first['state']).to eq(stores.first.state)
     expect(info.first['zip']).to eq(stores.first.zip)
+    expect(info.first['base_adoption_fee']).to eq(stores.first.base_adoption_fee.to_s)
   end
 
   it "sends a single store's info" do
@@ -32,5 +33,11 @@ describe 'Store requests' do
     expect(info['city']).to eq(stores.first.city)
     expect(info['state']).to eq(stores.first.state)
     expect(info['zip']).to eq(stores.first.zip)
+    expect(info['base_adoption_fee']).to eq(stores.first.base_adoption_fee.to_s)
+  end
+
+  it "sends orders for a store" do
+    store = create(:store)
+    get api_v1_store_orders_path(store)
   end
 end

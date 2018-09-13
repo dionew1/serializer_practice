@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2018_09_11_195647) do
     t.string "age"
     t.string "gender"
     t.text "description"
+    t.decimal "adoption_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "store_id"
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_09_11_195647) do
     t.string "city"
     t.string "state"
     t.string "zip"
+    t.decimal "base_adoption_fee"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
