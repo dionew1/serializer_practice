@@ -9,6 +9,7 @@ The purpose of this repo is to practice using a serializer in an existing API.
 
 ### Setup
 After forking and/or cloning this project please run the following commands from the command line:
+- `bundle install`
 - `rake db:{create,migrate,seed}`
 - `rspec` All tests should be passing
 
@@ -33,12 +34,15 @@ After forking and/or cloning this project please run the following commands from
 ![alt text](https://github.com/dionew1/serializer_practice/blob/master/public/api_v1_stores_1_orders_1.png)
 
 ### Adding a Serializer
-1. Add `gem 'active_model_serializers'` to the Gemfile above `group :development, :test do`
-1. To generate the serializer folder and file in the command line run
-   `rails g serializer <insert name of the model>` ex. `rails g serializer pet`
+1. In the Gemfile, add `gem 'active_model_serializers'` right above `group :development, :test do`
+2. Run `bundle install`
+3. To generate the serializer folder and file in the command line, run
+   `rails g serializer <insert name of the model>` ex. `rails g serializer pet`. You should get a message like `create  app/serializers/pet_serializer.rb` in your terminal. In your text editor, you should see a `pet_serializer.rb` file in `app/serializers`.
+4. Start your server with `rails s`. Visit `http://localhost:3000/api/v1/pets` in your browser to see the JSON response that our `api/v1/pets` endpoint is returning.
 
 ### What do I put in a Serializer?
 A serializer is a great way to format a JSON response within the serializer we can do a few things:
+
 1. Tell it which attributes to use
 ```ruby
 # serializers/pet_serializer.rb
@@ -47,7 +51,7 @@ class PetSerializer < ActiveModel::Serializer
 end
 ```
 
-1. Add a relationship to display the info for that relationship
+2. Add a relationship to display the info for that relationship
 ```ruby
 # serializers/pet_serializer.rb
 class PetSerializer < ActiveModel::Serializer
@@ -57,7 +61,7 @@ class PetSerializer < ActiveModel::Serializer
 end
 ```
 
-1. Add a custom field
+3. Add a custom field
 ```ruby
 # serializers/pet_serializer.rb
 class PetSerializer < ActiveModel::Serializer
@@ -71,9 +75,8 @@ class PetSerializer < ActiveModel::Serializer
 end
 ```
 
-To see the changes to the JSON response start your local server from the command line: `rails s`
+Go back to the browser and see how the JSON response has changed!
 
-Then visit one of the above end points for pet
 
 ### Try it
 
